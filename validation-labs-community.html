@@ -38,35 +38,51 @@ textarea::-webkit-scrollbar-thumb {
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-zinc-100">
         <div class="flex h-16 max-w-7xl mr-auto ml-auto pr-6 pl-6 items-center justify-between">
-            <div class="flex items-center gap-2">
+            <a href="/" class="flex items-center gap-2">
                 <div class="w-5 h-5 bg-zinc-900 flex items-center justify-center">
                     <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
                 </div>
                 <span class="text-sm font-medium tracking-tighter uppercase text-zinc-900">Validation Labs</span>
-            </div>
+            </a>
             <div class="hidden md:flex gap-x-8 gap-y-8 items-center">
                 <div class="relative group">
                     <button class="flex transition-colors outline-none hover:text-green-500 group-hover:text-green-500 cursor-default text-xs font-medium text-zinc-500 pt-2 pb-2 gap-x-1.5 gap-y-1.5 items-center">Our Work</button>
                     <!-- Dropdown -->
                     <div class="absolute left-0 z-50 invisible w-48 pt-2 transition-all duration-200 ease-out transform translate-y-1 opacity-0 top-full group-hover:visible group-hover:opacity-100 group-hover:translate-y-0">
                         <div class="p-1 overflow-hidden bg-white border shadow-xl rounded-xl border-zinc-100 ring-1 ring-zinc-900/5">
-                            <a href="#" class="flex items-center gap-2 transition-colors hover:text-zinc-900 hover:bg-zinc-50 group/item text-xs font-medium text-zinc-600 rounded-lg pt-2 pr-3 pb-2 pl-3">
+                            <a href="/hypothesis" class="flex items-center gap-2 transition-colors hover:text-zinc-900 hover:bg-zinc-50 group/item text-xs font-medium text-zinc-600 rounded-lg pt-2 pr-3 pb-2 pl-3">
                                 <span class="w-1.5 h-1.5 rounded-full bg-zinc-200 transition-colors group-hover/item:bg-green-500"></span>
                                 Hypothesis
                             </a>
-                            <a href="#" class="flex items-center gap-2 px-3 py-2 text-xs font-medium transition-colors rounded-lg text-zinc-600 hover:text-zinc-900 hover:bg-zinc-50 group/item">
+                            <a href="/the-gap-2" class="flex items-center gap-2 px-3 py-2 text-xs font-medium transition-colors rounded-lg text-zinc-600 hover:text-zinc-900 hover:bg-zinc-50 group/item">
                                 <span class="w-1.5 h-1.5 rounded-full bg-zinc-200 transition-colors group-hover/item:bg-green-500"></span>
                                 The Gap
                             </a>
                         </div>
                     </div>
                 </div>
-                <a href="#" class="hover:text-green-500 transition-colors text-xs font-medium text-zinc-500">Experiments</a>
-                <a href="#" class="text-xs font-medium text-zinc-900">Community</a>
-                <a href="#" class="hover:text-green-500 transition-colors text-xs font-medium text-zinc-500">Services</a>
+                                <a href="/validation-labs-community" class="text-xs font-medium text-zinc-900">Community</a>
+                <a href="/lab-as-a-service" class="hover:text-green-500 transition-colors text-xs font-medium text-zinc-500">Services</a>
             </div>
+            <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-10 h-10" aria-label="Toggle menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button>
         </div>
     </nav>
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-white transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+        <div class="flex flex-col h-full pt-20 px-6">
+            <div class="flex flex-col gap-2">
+                <span class="text-xs font-mono text-zinc-400 uppercase tracking-widest mb-2">Our Work</span>
+                <a href="/hypothesis" class="py-3 text-base font-medium text-zinc-900 border-b border-zinc-100">Hypothesis</a>
+                <a href="/the-gap-2" class="py-3 text-base font-medium text-zinc-900 border-b border-zinc-100">The Gap</a>
+                <a href="/the-lab" class="py-3 text-base font-medium text-zinc-900 border-b border-zinc-100">The Lab</a>
+                <a href="/lit-review" class="py-3 text-base font-medium text-zinc-900 border-b border-zinc-100">Lit Review</a>
+            </div>
+            <div class="flex flex-col gap-2 mt-6">
+                <a href="/validation-labs-community" class="py-3 text-base font-medium text-zinc-900 border-b border-zinc-100">Community</a>
+                <a href="/lab-as-a-service" class="py-3 text-base font-medium text-zinc-900 border-b border-zinc-100">Services</a>
+            </div>
+        </div>
+    </div>
+    <script>document.getElementById('mobile-menu-btn').addEventListener('click',function(){var menu=document.getElementById('mobile-menu');menu.classList.toggle('translate-x-full');menu.classList.toggle('translate-x-0');});</script>
 
     <!-- Main Layout -->
     <main class="pt-32 pb-24 px-6 max-w-7xl mx-auto">
@@ -297,12 +313,7 @@ textarea::-webkit-scrollbar-thumb {
                 </div>
                 <span class="uppercase text-xs text-zinc-500 tracking-widest font-mono">Validation Labs © 2026</span>
             </div>
-            <div class="flex gap-6">
-                <a href="#" class="text-xs font-medium text-zinc-500 hover:text-zinc-900 transition-colors">Hypothesis</a>
-                <a href="#" class="text-xs font-medium text-zinc-500 hover:text-zinc-900 transition-colors">Experiments</a>
-                <a href="#" class="text-xs font-medium text-zinc-500 hover:text-zinc-900 transition-colors">Twitter</a>
-            </div>
-        </div>
+                    </div>
     </footer>
 
     <script>
